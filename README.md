@@ -1,11 +1,11 @@
-# BL-HiChIP nextflow pipeline
+# DRP-DNA-DNA nextflow pipeline
 
 ## Installation
 conda create a clean enviroment
 ```bash
 
-$conda create -p ~/.conda/envs/bl-hichip
-$conda activate bl-hichip
+$conda create -p ~/.conda/envs/DRP-DNA-DNA
+$conda activate DRP-DNA-DNA
 ```
 ### conda 
 
@@ -30,7 +30,7 @@ $ make
 you can get trimLinker path = ~/00.software/ChIA-PET2/bin/trimLinker
 
 ### install fithichip
-
+Find details in this way https://ay-lab.github.io/FitHiChIP/usage/installation.html
 
 ## Run
 
@@ -38,7 +38,7 @@ you can get trimLinker path = ~/00.software/ChIA-PET2/bin/trimLinker
 # edit config file
 $ vim nextflow.config
 # enter environment
-$ conda activate bl-hichip
+$ conda activate DRP-DNA-DNA
 # add paths to $PATH
 $ export PATH=/path/to/nextflow:$PATH
 $ export PATH=/path/to/HiC-Pro:$PATH
