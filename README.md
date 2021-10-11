@@ -4,8 +4,8 @@
 conda create a clean enviroment
 ```bash
 
-$conda create -p ~/.conda/envs/DRP-DNA-DNA
-$conda activate DRP-DNA-DNA
+$ conda create -p ~/.conda/envs/DRP-DNA-DNA
+$ conda activate DRP-DNA-DNA
 ```
 ### conda 
 
