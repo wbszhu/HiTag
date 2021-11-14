@@ -1,4 +1,4 @@
-# DRP-DNA-DNA nextflow pipeline
+# HiTag nextflow pipeline
 
 ## Installation
 conda create a clean enviroment
