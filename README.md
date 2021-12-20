@@ -1,11 +1,11 @@
 # HiTag nextflow pipeline
 
 ## Installation
-conda create a clean enviroment
+conda create a clean environment
 ```bash
 
-$ conda create -p ~/.conda/envs/DRP-DNA-DNA
-$ conda activate DRP-DNA-DNA
+$ conda create -p ~/.conda/envs/HiTag
+$ conda activate HiTag
 ```
 ### conda 
 
@@ -38,7 +38,7 @@ Find details in this way https://ay-lab.github.io/FitHiChIP/usage/installation.h
 # edit config file
 $ vim nextflow.config
 # enter environment
-$ conda activate DRP-DNA-DNA
+$ conda activate HiTag
 # add paths to $PATH
 $ export PATH=/path/to/nextflow:$PATH
 $ export PATH=/path/to/HiC-Pro:$PATH
