@@ -1,9 +1,35 @@
 # HiTag nextflow pipeline
 
-## Installation
-conda create a clean environment
-```bash
+Gene expression is not only influenced by linear regulatory elements, but an increasing number of studies have shown that chromatin spatial interactions also play an important role in the regulation of gene expression. The discovery of this phenomenon is based on the continuous advances in chromatin conformation capture technology.
 
+More than a decade has passed since the first chromosomal conformation capture 3C technology became available. During this time, the quality and quantity of capture techniques from chromatin space have increased significantly. Techniques such as circular chromosome conformation capture (4C), 3C-carbon copies derived from 3C (5C) have opened up the possibility of studying long-distance interactions between chromatin. The advent of Hi-C was a major breakthrough in the study of the spatial structure of biological genomes, and Hi-ChIP and ChIA-PET were an important step towards the detection of specific protein-mediated spatial interactions. 
+
+Hi-C, ChIA-PET, Hi-ChIP and PLAC-seq require a largenumber of cells and are cumbersome to use in certain cell-sparse samples due to their low capture efficiency. chromatin conformation, we developed the Hi-Tag.
+## Dependencies
+
+The codebase relies on the following dependancies (tested version provided in 
+parentheses):
+
+```
+trim-galore
+bwa
+pairtools
+bedtools
+cooler
+
+```
+
+## Description of the HiTag
+
+```
+XXX
+```
+
+## Installation
+
+conda create a clean environment
+
+```bash
 $ conda create -p ~/.conda/envs/HiTag
 $ conda activate HiTag
 ```
