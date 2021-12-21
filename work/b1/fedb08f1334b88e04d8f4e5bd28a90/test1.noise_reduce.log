@@ -1,0 +1,14 @@
+# type count
+valid	11011
+self-circle	6
+dangling-end	8427
+dump	1
+re-ligation	10131
+total	29576
+
+# position count
+++	1073
++-	26398
+-+	1088
+--	1017
+

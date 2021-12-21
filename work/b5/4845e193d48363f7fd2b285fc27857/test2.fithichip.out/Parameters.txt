@@ -1,0 +1,12 @@
+Summarizing the parameters employed in this execution
+Listing the input files: 
+Input file containing the valid pairs (generated from HIC-PRO pipeline): /public/home/luzhang/00.software/HiTag/work/b5/4845e193d48363f7fd2b285fc27857/test2.validPairs 
+Input ChIP-seq peak file: /public/home/luzhang/00.software/HiTag/./test_data/H3K27ac_K562_pup5_qup2_peak.bed 
+File containing chromosome size information corresponding to the reference chromosome: /public/home/luzhang/22.genome/GRCh38/GRCh38.primary_assembly.genome_no_scaff.fa.sizes 
+Output directory which will store all the results: /public/home/luzhang/00.software/HiTag/work/b5/4845e193d48363f7fd2b285fc27857/test2.fithichip.out 
+Base directory containing the HIC-PRO executable: /public/home/luzhang/00.software/bin/HiC-Pro_3.0.0 
+Low distance threshold: 5000 
+Higher distance threshold: 2000000 
+BIN_SIZE: 5000 
+PREFIX (string of output files): FitHiChIP 
+OverWrite (1 means existing files will be overwritten): 1 

@@ -1,0 +1,19 @@
+Error allowed is 2
+thread is 12
+mode is 1
+keepempty is 2
+min length of trimmed read is 16
+Output dir is .
+Output name is test1
+linkerA is ACGCGATATCTTATC
+linkerB is AGTCAGATAAGATAT
+Reads 1: test1_R1_val_1.fq.gz
+Reads 2: test1_R2_val_2.fq.gz
+Processed 49994 pair reads
+Total PETs:	49994
+Expect PETs:	49960
+Expect both PETs:	2776
+Chim PETs:	19
+1Empty PETs:	10632
+2Empty PETs:	36552
+Valid PETs:	45015

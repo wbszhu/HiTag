@@ -1,0 +1,142 @@
+
+
+ ================ Parsing input configuration file ================= 
+
+
+Content of ValidPairs is test1.validPairs
+Content of Interval is 
+Content of Matrix is 
+Content of Bed is 
+Content of PeakFile is /public/home/luzhang/00.software/HiTag/./test_data/H3K27ac_K562_pup5_qup2_peak.bed
+Content of OutDir is test1.fithichip.out
+Content of IntType is 3
+Content of BINSIZE is 5000
+Content of LowDistThr is 5000
+Content of UppDistThr is 2000000
+Content of UseP2PBackgrnd is 0
+Content of BiasType is 1
+Content of MergeInt is 1
+Content of QVALUE is 0.01
+Content of ChrSizeFile is /public/home/luzhang/22.genome/GRCh38/GRCh38.primary_assembly.genome_no_scaff.fa.sizes
+Content of PREFIX is FitHiChIP
+Content of OverWrite is 1
+Base directory containing HiCPro package : /public/home/luzhang/00.software/bin/HiC-Pro_3.0.0
+
+
+ ================ Verifying input configuration parameters ================= 
+
+
+***** Specified output directory : test1.fithichip.out
+HiC-pro is installed in the system
+Installed HiC-pro version: 3.0.0
+Installed python version: 3.9.9
+*** Python library gzip is installed
+*** Python module OptionParser (from the package optparse) is installed
+*** Python package networkx is installed
+*** Found MACS2 package (for peak calling) installed in the system -  2.2.7.1
+Installed R version: 4.0.5
+Installed samtools version: 1.12
+*** bgzip utility is installed in the system
+*** tabix utility is installed in the system
+Installed bedtools version: 2.30.0
+
+
+ ====== Changing relative pathnames of the input files to their absolute path names ========== 
+
+
+Absolute converted path: InpValidPairsFile: /public/home/luzhang/00.software/HiTag/work/14/d54e9b243cc9ea965f7f67bb7f6271/test1.validPairs
+Absolute converted path: OutDir: /public/home/luzhang/00.software/HiTag/work/14/d54e9b243cc9ea965f7f67bb7f6271/test1.fithichip.out
+/public/home/luzhang/00.software/HiTag/work/14/d54e9b243cc9ea965f7f67bb7f6271
+
+
+ ====== Final checing of input parameters ========== 
+
+
+
+
+ ====== Writing input parameters ========== 
+
+
+Executable of python3: /public/home/luzhang/.conda/envs/HiTag/bin/python3
+Executable of R : /public/home/luzhang/.conda/envs/HiTag/bin/Rscript
+
+
+ ================ Processing HiC-pro generated valid pairs and / or matrix files provided as input ================= 
+
+
+
+ ====>> Computing HiC-pro matrices from the input valid pairs file
+
+ ====>> Executable to generate contact matrix from valid pairs: /public/home/luzhang/00.software/bin/HiC-Pro_3.0.0/scripts/build_matrix
+***** HiC-pro input valid pairs file in simple text format
+
+ ====>> Created file : /public/home/luzhang/00.software/HiTag/work/14/d54e9b243cc9ea965f7f67bb7f6271/test1.fithichip.out/HiCPro_Matrix_BinSize5000/MatrixHiCPro_abs.bed 
+
+ ====>> Created file : /public/home/luzhang/00.software/HiTag/work/14/d54e9b243cc9ea965f7f67bb7f6271/test1.fithichip.out/HiCPro_Matrix_BinSize5000/MatrixHiCPro.matrix 
+
+ ================ Creating input interactions (bin pairs + CC) =================
+
+ ======= Generated interaction file : /public/home/luzhang/00.software/HiTag/work/14/d54e9b243cc9ea965f7f67bb7f6271/test1.fithichip.out/HiCPro_Matrix_BinSize5000/FitHiChIP.interactions.initial.bed 
+==>>> Number of locus pairs with nonzero contact count (without any distance thresholding): 10767
+
+
+ ======= Limiting input interactions to the specified distance ranges 5000 to 2000000 =========
+
+
+===>> Number of cis pairs with nonzero contact count (after distance thresholding): 1402
+
+
+ ================ Generating coverage statistics and bias for individual bins ================= 
+
+
+======== Computed initial coverage information for individual genomic bins - file : /public/home/luzhang/00.software/HiTag/work/14/d54e9b243cc9ea965f7f67bb7f6271/test1.fithichip.out/NormFeatures/FitHiChIP.coverage.bed
+
+ ================ Computing bias statistics - coverage bias will be employed =================
+======== Appended coverage bias information for individual genomic bins
+======== Computed bias statistics - file : /public/home/luzhang/00.software/HiTag/work/14/d54e9b243cc9ea965f7f67bb7f6271/test1.fithichip.out/NormFeatures/Coverage_Bias/FitHiChIP.coverage_Bias.bed
+
+
+ ================ creating full feature file for FitHiChIP ================= 
+
+
+======== Created full feature file : /public/home/luzhang/00.software/HiTag/work/14/d54e9b243cc9ea965f7f67bb7f6271/test1.fithichip.out/NormFeatures/Coverage_Bias/FitHiChIP.AllBin_CompleteFeat.bed
+
+
+ ================ Generating interactions + features for significance estimation ================= 
+
+
+Contact count col: 7
+Total number of columns for the complete feature interactions: 
+Specified Interaction Type (in the configuration parameter file): 3
+Derived IntLow: 3
+Derived IntHigh: 3
+
+
+ **** Start of while Loop ----- current interaction type: 3  ****** 
+
+
+
+ ============ Calling significant interactions =============== 
+
+Created sorted genomic distance based interaction file
+============== directory for FitHiChIP significant interaction calling: /public/home/luzhang/00.software/HiTag/work/14/d54e9b243cc9ea965f7f67bb7f6271/test1.fithichip.out/FitHiChIP_Peak2ALL_b5000_L5000_U2000000/P2PBckgr_0/Coverage_Bias/FitHiC_BiasCorr
+
+
+ ============= Calling significant interactions ========== 
+
+
+******** FINISHED calling significant interactions
+ERROR !!!!!!!! FitHiChIP could not compute the statistical significance of input interactions
+Check the input parameters, or check if the number of input nonzero contact locus pairs are too few !!!
+If you are using peak to peak background only (UseP2PBackgrnd=1 or stringent background), check the number of nonzero peak-to-peak locus pairs (peak-to-peak) !!! In such a case, you should go for loose background (UseP2PBackgrnd=0) for modeling interaction significance!!! Specially, if the sequencing depth of your data is very low....
+----- Extracted significant interactions ---- FDR threshold lower than: 0.01
+SORRY !!!!!!!! FitHiChIP could not find any statistically significant interactions
+Check the input parameters, or check if the number of input nonzero contact locus pairs are too few !!!
+If you are using peak to peak background only (UseP2PBackgrnd=1 or stringent background), check the number of nonzero peak-to-peak locus pairs (peak-to-peak) !!! In such a case, you should go for loose background (UseP2PBackgrnd=0) for modeling interaction significance!!! Specially, if the sequencing depth of your data is very low....
+There is no significant interaction - so no WashU specific session file is created !!
+Updated CurrIntType: 4
+
+ **** Now summarizing FitHiChIP results in the HTML file *** 
+
+***** There are one or more errors / notifications (such as zero interaction count) associated with this execution !!!
+***** Please check the console to know about them !!

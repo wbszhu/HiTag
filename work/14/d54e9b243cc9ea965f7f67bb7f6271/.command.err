@@ -1,0 +1,12 @@
+Error in library(optparse) : there is no package called ‘optparse’
+Execution halted
+Error in library(optparse) : there is no package called ‘optparse’
+Execution halted
+awk: fatal: cannot open file `/public/home/luzhang/00.software/HiTag/work/14/d54e9b243cc9ea965f7f67bb7f6271/test1.fithichip.out/NormFeatures/Coverage_Bias/FitHiChIP.coverage_Bias.bed' for reading (No such file or directory)
+Error in library(optparse) : there is no package called ‘optparse’
+Execution halted
+cat: /public/home/luzhang/00.software/HiTag/work/14/d54e9b243cc9ea965f7f67bb7f6271/test1.fithichip.out/FitHiChIP_ALL2ALL_b5000_L5000_U2000000/Coverage_Bias/Interactions.bed: No such file or directory
+awk: fatal: cannot open file `/public/home/luzhang/00.software/HiTag/work/14/d54e9b243cc9ea965f7f67bb7f6271/test1.fithichip.out/FitHiChIP_ALL2ALL_b5000_L5000_U2000000/Coverage_Bias/Interactions.bed' for reading (No such file or directory)
+Error in library(fdrtool) : there is no package called ‘fdrtool’
+Execution halted
+awk: fatal: cannot open file `/public/home/luzhang/00.software/HiTag/work/14/d54e9b243cc9ea965f7f67bb7f6271/test1.fithichip.out/FitHiChIP_Peak2ALL_b5000_L5000_U2000000/P2PBckgr_0/Coverage_Bias/FitHiC_BiasCorr/FitHiChIP.interactions_FitHiC.bed' for reading (No such file or directory)
