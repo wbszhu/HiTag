@@ -24,10 +24,8 @@ HiC-Pro
 
 ## Description of the HiTag
 
-```
 Compared with the traditional Hi-ChIP and ChIA-PET, the experimental cycle time is greatly shortened and the samples to be sequenced can be obtained in only two days. The present invention can obtain the same chromatin spatial structure map as the traditional technique with relatively small amount of data, which greatly saves the sequencing cost. The data signal-to-noise ratio of this invention is higher than that of the traditional method, which effectively increases the proportion of valid data in the data.
 
-```
 
 ## Installation
 
