@@ -13,19 +13,20 @@ import io
 @click.argument("linkerb")
 def trim_linker(fq_1, fq_2, linkera, linkerb, out_f1, out_f2):
     with open_fastq(fq_1) as f1, open_fastq(fq_2) as f2:
-        o1 = write_fastq(out_f1)
-        o2 = write_fastq(out_f2)
+        o1 = open_write_fastq(out_f1)
+        o2 = open_write_fastq(out_f2)
         while True:
             rec1 = read_rec(f1)
-            record1, _ = linker_detect(rec1, linkera, linkerb)
+            record1, rec1_has_linker = linker_detect(rec1, linkera, linkerb)
             out_rec1 = dict2string(record1)
             rec2 = read_rec(f2)
-            record2, _ = linker_detect(rec2, linkera, linkerb)
+            record2, rec2_has_linker = linker_detect(rec2, linkera, linkerb)
             out_rec2 = dict2string(record2)
             if (len(rec1["name"]) == 0) or (len(rec2["name"]) == 0):
                 break
-            o1.write(out_rec1 + "\n")
-            o2.write(out_rec2 + "\n")
+            if rec1_has_linker or rec2_has_linker:
+                o1.write(out_rec1 + "\n")
+                o2.write(out_rec2 + "\n")
 
 
 def read_rec(f):
@@ -56,18 +57,21 @@ def linker_detect(record, linkera, linkerb):
     aligner = Aligner(sequ, 0.13)
     resulta = aligner.locate(linkera)
     resultb = aligner.locate(linkerb)
-    id_ = record["name"]
     if resulta is not None:
         st = resulta[0]
         if len(sequ[:st]) > 16:
             record["seq"]  = sequ[:st]
             record["qual"] = record["qual"][:st] + "\n"
+        has_linker = True
     elif resultb is not None:
         st = resultb[0]
         if len(sequ[:st]) > 16:
             record["seq"]  = sequ[:st]
             record["qual"] = record["qual"][:st] + "\n"
-    return record, id_
+        has_linker = True
+    else:
+        has_linker = False
+    return record, has_linker
 
 
 def open_fastq(fname, mode='r'):
@@ -79,7 +83,7 @@ def open_fastq(fname, mode='r'):
     return fh
 
 
-def write_fastq(fname, mode='wt'):
+def open_write_fastq(fname, mode='wt'):
     fh = gzip.open(fname, mode)
     return fh
 
