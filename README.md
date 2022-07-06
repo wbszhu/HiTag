@@ -12,11 +12,11 @@ parentheses):
 
 ```
 trim-galore
+pysam
 bwa
 pairtools
 bedtools
 cooler
-ChIA-PET2
 Fithichip
 HiC-Pro
 
@@ -36,18 +36,17 @@ $ conda env create -f HiTag.yml  -p ~/.conda/envs/HiTag
 $ conda activate HiTag
 ```
 
-### install trimLinker
+### install pysam
 
 ```bash
-$ git clone https://github.com/GuipengLi/ChIA-PET2.git
-$ tar -zxvf ChIA-PET2.tar.gz
-$ cd ChIA-PET2
-$ chmod +x bin/ChIA-PET2
-$ make
-
+$ conda config --add channels r
+$ conda config --add channels bioconda
+$ conda install pysam
 ```
-you can get trimLinker path = ~/00.software/ChIA-PET2/bin/trimLinker
-
+OR you can install through pypi
+```
+pip install pysam
+```
 ### install fithichip
 Find details in this way https://ay-lab.github.io/FitHiChIP/usage/installation.html
 
