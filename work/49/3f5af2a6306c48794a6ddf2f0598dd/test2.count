@@ -1,7 +1,0 @@
-raw_reads	50000
-trim_adapter	49994
-trim_linker	45015
-bam2pairs	45015	38427	6588
-dedup	29673	27068	2605
-UU	29576	27002	2574
-remove_noise	11011	8437	2574
