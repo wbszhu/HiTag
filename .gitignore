@@ -7,3 +7,4 @@ flower.*
 DRP-66/
 *.lsf
 test_data/GRCh38.AluI.bed.gz
+tmp/
