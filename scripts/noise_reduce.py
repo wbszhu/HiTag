@@ -5,11 +5,19 @@ import logging
 import subprocess
 from queue import Empty
 import multiprocessing as mp
-from collections import defaultdict
 
 import click
 import numpy as np
 import h5py
+
+
+LOGGING_FMT = "%(name)-20s %(levelname)-7s @ %(asctime)s: %(message)s"
+LOGGING_DATE_FMT = "%m/%d/%y %H:%M:%S"
+log = logging.getLogger(__name__)
+handler = logging.StreamHandler(sys.stderr)
+handler.setFormatter(logging.Formatter(fmt=LOGGING_FMT, datefmt=LOGGING_DATE_FMT))
+log.addHandler(handler)
+log.setLevel(logging.DEBUG)
 
 
 types = ("valid", "self-circle", 'dangling-end', "dump", "re-ligation")
@@ -70,8 +78,6 @@ def read_and_skip_headers(file, comment="#"):
 
 TIME_OUT = 1
 CHUNK_SIZE = 10000
-
-log = logging.getLogger(__name__)
 
 
 def load_rest_sites(frag_file):
