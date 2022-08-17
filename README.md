@@ -50,6 +50,17 @@ pip install pysam
 ### install fithichip
 Find details in this way https://ay-lab.github.io/FitHiChIP/usage/installation.html
 
+## config
+When you run the nextflow or fithichip commands and need to generate your own config file quickly and easily, you may want to
+config for nextflow
+```
+python scripts/nextflow_config.py linkerA linkerB min_mapq gsize bwa_index Enzyme.bed> nextflow.config
+```
+config for fithichip
+```
+python scripts/format_fithichip_config.py ValidPairs PeakFile OutDir LowDistThr genome_size params.use_P2P_background > fithichip.config
+```
+
 ## Run
 
 ```bash
@@ -63,4 +74,13 @@ $ export PATH=/path/to/HiC-Pro:$PATH
 $ export PATH=/path/to/FitHiChIP_HiCPro.sh:$PATH
 # run nextflow
 $ nextflow run main.nf
+```
+## Note
+Here, linkerA and linkerB represents the sense-strand(F) and antisense-strand(R) of the bridge linker, respectively.
+Like this
+```
+linker A (F)
+-------->*ACGCGATATCTTATC*TGACT-------
+---------TGCGC*TATCGAATAGACTGA*<------
+                              linker B(R)
 ```
