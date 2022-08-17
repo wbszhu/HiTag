@@ -43,7 +43,7 @@ $ conda config --add channels r
 $ conda config --add channels bioconda
 $ conda install pysam
 ```
-OR you can install through pypi
+**Or** you can install through pypi
 ```
 pip install pysam
 ```
@@ -58,7 +58,7 @@ python scripts/nextflow_config.py linkerA linkerB min_mapq gsize bwa_index Enzym
 ```
 config for fithichip
 ```
-python scripts/format_fithichip_config.py ValidPairs PeakFile OutDir LowDistThr genome_size params.use_P2P_background > fithichip.config
+python scripts/format_fithichip_config.py ValidPairs PeakFile OutDir LowDistThr genome_size use_P2P_background > fithichip.config
 ```
 
 ## Run
@@ -76,7 +76,7 @@ $ export PATH=/path/to/FitHiChIP_HiCPro.sh:$PATH
 $ nextflow run main.nf
 ```
 ## Note
-Here, linkerA and linkerB represents the sense-strand(F) and antisense-strand(R) of the bridge linker, respectively.
+Here, linkerA and linkerB represents the sense-strand(F) and antisense-strand(R) of the bridge linker, respectively.\
 Like this
 ```
 linker A (F)
