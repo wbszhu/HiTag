@@ -80,7 +80,7 @@ Here, linkerA and linkerB represents the sense-strand(F) and antisense-strand(R)
 Like this
 ```
 linker A (F)
--------->**ACGCGATATCTTATC**TGACT-------
----------TGCGC**TATCGAATAGACTGA**<------
+-------->ACGCGATATCTTATCTGACT-------
+---------TGCGCTATCGAATAGACTGA<------
                               linker B(R)
 ```
