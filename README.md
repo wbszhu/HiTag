@@ -61,7 +61,6 @@ $ conda activate HiTag
 $ export PATH=/path/to/nextflow:$PATH
 $ export PATH=/path/to/HiC-Pro:$PATH
 $ export PATH=/path/to/FitHiChIP_HiCPro.sh:$PATH
-$ export PATH=/path/to/trimLinker:$PATH
 # run nextflow
 $ nextflow run main.nf
 ```
