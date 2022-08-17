@@ -61,7 +61,7 @@ BINSIZE=5000
 
 # Lower distance threshold of interaction between two segments
 # (default = 20000 or 20 Kb)
-LowDistThr={LowDistThr}
+LowDistThr=20000
 
 # Upper distance threshold of interaction between two segments
 # (default = 2000000 or 2 Mb)
