@@ -111,9 +111,9 @@ def worker(task_queue, linker_a, linker_b, out_path_1, out_path_2):
         for rec1, rec2 in chunk:
             record1, rec1_has_linker = linker_detect(rec1, linker_a, linker_b)
             record2, rec2_has_linker = linker_detect(rec2, linker_a, linker_b)
-            out_rec1 = dict2string(record1)
-            out_rec2 = dict2string(record2)
-            if rec1_has_linker or rec2_has_linker:
+            if (len(record1["seq"])>=16) and (len(record2["seq"])>=16):
+                out_rec1 = dict2string(record1)
+                out_rec2 = dict2string(record2)
                 o1.write(out_rec1 + "\n")
                 o2.write(out_rec2 + "\n")
 
@@ -132,20 +132,19 @@ def linker_detect(record, linkera, linkerb):
     aligner = Aligner(sequ, 0.13)
     resulta = aligner.locate(linkera)
     resultb = aligner.locate(linkerb)
+    has_linker = False
     if resulta is not None:
         st = resulta[0]
-        if len(sequ[:st]) > 16:
+        if (resulta[1]-resulta[0]) >= 13:
             record["seq"]  = sequ[:st]
             record["qual"] = record["qual"][:st] + "\n"
-        has_linker = True
-    elif resultb is not None:
+            has_linker = True    
+    if (not has_linker) and (resultb is not None):
         st = resultb[0]
-        if len(sequ[:st]) > 16:
+        if (resultb[1]-resultb[0]) >= 13:
             record["seq"]  = sequ[:st]
             record["qual"] = record["qual"][:st] + "\n"
-        has_linker = True
-    else:
-        has_linker = False
+            has_linker = True
     return record, has_linker
 
 
