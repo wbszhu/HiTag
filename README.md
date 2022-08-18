@@ -36,7 +36,7 @@ conda create a clean environment
 $ conda env create -f HiTag.yml  -p ~/.conda/envs/HiTag
 $ conda activate HiTag
 ```
-
+The vast majority of software can be installed using conda, and we recommend doing so. However, it should be noted that it is important to check the version of the software.
 ### install pysam
 
 ```bash
