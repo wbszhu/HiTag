@@ -48,9 +48,18 @@ $ conda install pysam
 ```
 pip install pysam
 ```
-### install fithichip
-Find details in this way https://ay-lab.github.io/FitHiChIP/usage/installation.html
 
+### install fithichip
+Find details in this [way](https://ay-lab.github.io/FitHiChIP/usage/installation.html)
+
+## restriction fragments
+BED file with restriction fragments can be generated with the help of [hic-pro](https://github.com/nservant/HiC-Pro)\
+Example
+```
+   HICPRO_PATH/bin/utils/digest_genome.py -r AG^CT -o  GRCh38.AluI.bed  GRCh38.fasta
+   
+```
+For details, please check [this](https://github.com/nservant/HiC-Pro/blob/master/doc/UTILS.md).
 ## config
 When you run the nextflow or fithichip commands and need to generate your own config file quickly and easily, you may want to
 config for nextflow
