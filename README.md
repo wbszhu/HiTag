@@ -11,6 +11,7 @@ The codebase relies on the following dependancies (tested version provided in
 parentheses):
 
 ```
+nextflow
 trim-galore
 pysam
 bwa
