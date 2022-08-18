@@ -200,7 +200,7 @@ process fithichip {
         result = "${sample_id}.fithichip.out"
         """
         python ${params.script_dir}/format_fithichip_config.py ${pairs} ${params.chipdata} ${result} ${params.resolution_fithichip} ${params.genome_size} ${params.use_P2P_background} > ${config}
-        bash /public/home/luzhang/00.software/FitHiChIP/FitHiChIP_HiCPro.sh -C ${config}
+        bash FitHiChIP_HiCPro.sh -C ${config}
         """
 }
 
