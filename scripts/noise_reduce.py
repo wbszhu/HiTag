@@ -243,7 +243,7 @@ def worker(task_queue,
                 continue
 
             out_line = "\t".join([str(i) for i in items])
-            if frag1:
+            if frag1 is not None:
                 out_line += "\t{}\t{}".format(frag1, frag2)
             out_line += "\n"
 
@@ -252,7 +252,7 @@ def worker(task_queue,
                     handles[tp].write(out_line)
                     l_t_counts[tp] += 1
 
-            if frag1:
+            if frag1 is not None:
                 position = items[-2] + items[-1]
                 l_p_counts[position] += 1
 
