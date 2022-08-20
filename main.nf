@@ -20,7 +20,7 @@ process trim_linker {
         tuple val(sample_id), file("${sample_id}_{1,2}.valid.fastq.gz")
     
     """
-    python ${params.script_dir}/trim_linker_V2.py ${reads[0]} ${reads[1]} ${sample_id}_1.valid.fastq.gz ${sample_id}_2.valid.fastq.gz ${params.linker_A} ${params.linker_B} 
+    python ${params.script_dir}/trim_linker.py ${reads[0]} ${reads[1]} ${sample_id}_1.valid.fastq.gz ${sample_id}_2.valid.fastq.gz ${params.linker_A} ${params.linker_B} 
     """
 }
 
