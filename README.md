@@ -37,7 +37,7 @@ $ conda env create -f HiTag.yml  -p ~/.conda/envs/HiTag
 $ conda activate HiTag
 ```
 The vast majority of software can be installed using conda, and we recommend doing so. However, it should be noted that it is important to check the version of the software.
-### install pysam
+### Install pysam
 
 ```bash
 $ conda config --add channels r
@@ -49,10 +49,10 @@ $ conda install pysam
 pip install pysam
 ```
 
-### install fithichip
+### Install fithichip
 Find details in this [way](https://ay-lab.github.io/FitHiChIP/usage/installation.html)
 
-## restriction fragments
+## Restriction fragments
 BED file with restriction fragments can be generated with the help of [hic-pro](https://github.com/nservant/HiC-Pro)\
 Example
 ```
@@ -60,7 +60,7 @@ Example
    
 ```
 For details, please check [this](https://github.com/nservant/HiC-Pro/blob/master/doc/UTILS.md).
-## config
+## Config
 When you run the nextflow or fithichip commands and need to generate your own config file quickly and easily, you may want to
 config for nextflow
 ```
