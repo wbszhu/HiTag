@@ -94,3 +94,11 @@ linker A (F)
 ---------TGCGCTATCGAATAGACTGA<------
                               linker B(R)
 ```
+
+## Published Article
+
+**Title:** [[Hi-Tag: a simple and efficient method for identifying protein-mediated long-range chromatin interactions with low cell numbers](https://doi.org/10.1007/s11427-023-2441-0)]
+
+**Authors:** Xiaolong Qi†, Lu Zhang†, Qiulin Zhao, Peng Zhou, SaiXian Zhang, Jingjin Li, Zhuqing Zheng, Yue Xiang, Xueting Dai, Zhe Jin, Yaobang Jian, Xinyun Li*, Liangliang Fu*, Shuhong Zhao*
+
+**Journal:** SCIENCE CHINA Life Sciences , Volume 67, Issue 5: 1027 - 1034 (2024) 
