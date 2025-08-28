@@ -95,7 +95,7 @@ linker A (F)
                               linker B(R)
 ```
 
-## Published Article
+## Cite Us
 
 **Title:** [[Hi-Tag: a simple and efficient method for identifying protein-mediated long-range chromatin interactions with low cell numbers](https://doi.org/10.1007/s11427-023-2441-0)]
 
